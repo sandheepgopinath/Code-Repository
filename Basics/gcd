@@ -1,0 +1,76 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Sep  6 08:29:35 2021
+
+@author: blink
+"""
+
+#GCD
+import pandas as pd
+
+
+def gcdq(value1, value2):
+ 
+     biggest=0
+     if value1>value2:
+         biggest=value1
+         smallest=value2
+     else: 
+         biggest=value2
+         smallest=value1
+     # print(biggest, smallest)
+     steps=0
+     while (biggest!=0 ) & ( smallest!=0):
+         # print(biggest, smallest)
+         temp=smallest
+         smallest=biggest%smallest
+         biggest=temp
+         steps+=1
+     return steps,biggest
+ 
+
+pair=[0,0]
+largestSteps=0
+
+digits=[11,101,1001]
+for limit in digits:
+        
+    df=pd.DataFrame()
+    pairColumn=[]
+    stepsColumn=[]
+    gcd=[]
+
+    for i in range(1,limit):
+        for j in range(1,limit):
+            steps,biggest=gcdq(i,j)
+            pairColumn.append([i,j])
+            stepsColumn.append(steps)
+            gcd.append(biggest)
+            if steps>largestSteps:
+                largestSteps=steps
+                pair=[i,j]
+         
+    if limit==11:   
+        df['Pair']=pairColumn
+        df['Steps'] =stepsColumn
+        df['GCD']=gcd
+        print(pair, largestSteps)
+        df.to_csv('GCDOnedigit.csv')
+    elif limit==101:
+        df['Pair']=pairColumn
+        df['Steps'] =stepsColumn
+        df['GCD']=gcd
+        print(pair, largestSteps)
+        df.to_csv('GCDTwodigit.csv')
+    elif limit==1001:
+        df['Pair']=pairColumn
+        df['Steps'] =stepsColumn
+        df['GCD']=gcd
+        print(pair, largestSteps)
+        df.to_csv('GCDThreedigit.csv')
+        
+        
+        
+        
+#%%

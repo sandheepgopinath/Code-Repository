@@ -1,0 +1,15 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Sep  5 01:02:17 2021
+ROT-N
+@author: blink
+"""
+
+alpha='abcdefghijklmnopqrstuvwxyzbb2'
+
+word='helloz'
+rotWord=''
+for i in word:
+    rotWord+=alpha[(alpha.index(i)+1)%25]
+print(rotWord)
