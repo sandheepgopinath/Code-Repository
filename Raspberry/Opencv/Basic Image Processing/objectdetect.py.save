@@ -1,0 +1,27 @@
+import numpy as np
+import cv2
+
+im=cv2.imread('brazing.jpg')
+im=cv2.resize(im,(640,480))
+
+#Making the image grayscale
+
+gray=cv2.cvtColor(im,cv2.COLOR_BGR2GRAY)
+
+#Making the image Binary
+bin=cv2.threshold(gray,250,255,cv2.THRESH_BINARY | cv2.THRESH_OTSU)[1]
+
+bin=cv2.threshold(bin,250,255,cv2.THRESH_BINARY | cv2.THRESH_OTSU)[1]
+
+#Creating a kernel
+kernel=np.ones((2,2),np.uint8)
+
+#Closing function
+
+closing=cv2.morphologyEx(bin,cv2.MORPH_CLOSE,kernel)
+
+cv2.imshow('Brazing)
+
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
