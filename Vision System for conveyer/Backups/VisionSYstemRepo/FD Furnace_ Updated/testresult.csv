@@ -1,0 +1,6 @@
+,partCode,type,circularityFilter,circularity,areaFilter,min,max,Tested,Counted
+0,,3solder,True,0.7,True,60,700,200,200
+1,,5copper,True,0.7,True,60,700,200,200
+2,,8copper,True,0.7,True,60,900,200,200
+3,,8flare,True,0.75,True,120,700,200,201
+4,,16fs,True,0.76,True,120,700,130,130
