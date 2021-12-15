@@ -1,0 +1,64 @@
+Test Case 2:
+************
+
+Take any one file randomly from the kernel-0.files (both file or directory
+should be okay for this test)
+
+eg., pick a file: 
+
+kernel-0/arch/m32r/boot/compressed/install.sh
+
+Do the following cmd from the directory where kernel-0 folder is in: 
+
+ls -di kernel-0/arch/m32r/boot/compressed/install.sh
+
+sample output on my system given below:
+
+2417846 kernel-0/arch/m32r/boot/compressed/install.sh
+
+the left most number above is the "objectid", fileid or inode number from stat.
+This should differ on your system and is unique across all files in the
+filesystem.
+
+
+With that number you are now ready to write second test case:
+
+
+tree = convert_input_to_tree(filename): # already tested in test case 1
+d=myfile(2417846)
+print(d.file_path(tree))
+
+the above should print : kernel-0/arch/m32r/boot/compressed/install.sh
+
+
+Now pick a directory from the kernel-0.files file.
+
+kernel-0/arch/m32r/boot/compressed
+
+follow the same procedure as above to get the fileid. on my system :
+
+ls -di kernel-0/arch/m32r/boot/compressed/
+
+gives 
+
+2417841 kernel-0/arch/m32r/boot/compressed/
+
+take the left most number on your system and you are ready to write the same
+test case but for the directory now and ensure it works :
+
+
+tree = convert_input_to_tree(filename): # already tested in test case 1
+d=mydir(2417841) 
+print(d.file_path(tree))
+
+the above should print : kernel-0/arch/m32r/boot/compressed/
+
+if you passed this congrats ! now go to test case 3.
+
+
+
+
+
+
+
+

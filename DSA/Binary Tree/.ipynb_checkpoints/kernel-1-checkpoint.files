@@ -1,0 +1,8 @@
+kernel-0
+kernel-0/arch
+kernel-0/arch/alpha
+kernel-0/arch/alpha/boot
+kernel-0/arch/alpha/boot/bootloader.lds
+kernel-0/arch/alpha/boot/bootp.c
+kernel-0/arch/alpha/boot/bootpz.c
+kernel-0/arch/alpha/boot/head.S

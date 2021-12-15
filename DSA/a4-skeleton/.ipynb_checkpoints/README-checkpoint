@@ -1,0 +1,31 @@
+1. extract the a4-skeleton.tar file.
+2. in the same directory extract the kernel-0.zip OR kernel-0.tar.bz2 file.
+  -- unzip for zip file
+  -- tar xvf for tar file
+
+3. do a "ls" and verify you have the following files :
+
+filetree.py
+kernel-0.files #input file for your test cases
+testcase1.txt
+testcase2.txt
+testcase3.txt
+README 
+test1.py
+test2.py
+test3.py
+tree_traverse_test
+
+Read the instructions for running test cases. You have to modify test2.py and
+test3.py on your system. See instructions in the corresponding .txt files.
+
+USE your mylist.py that you have done for quiz4. If it has passed all test cases
+in codepost, it should work.
+
+and after the extraction in step2 above :
+you will see a directory "kernel-0" under which all files will be there.
+Do not tamper with this directory.
+
+Have fun !!
+
+

@@ -1,0 +1,57 @@
+
+Test case 1.
+***********
+
+**** python code begin *** File: "test1.py"
+
+def list_files(obj, objpath, *args):
+    tlist=args[0][0]
+    tlist.append(objpath)
+
+# YOUR CODE here
+#write code to take input file "filename" (from assignment 1)
+
+tree = convert_input_to_tree(filename)
+tlist=[]
+tree.func_traverse(list_files, tlist)
+for i in tlist:
+		print(i)
+
+*** python test 1 code end ***
+
+write the above program in a test1.py 
+
+Your input file that will be give is called kernel-0.files
+
+./test1.py  kernel-0.files > cmpout
+
+
+Write a shell script code given below (also given as a file ):
+
+store it in test1.sh:
+
+**** shell script begin*** File: "tree_traverse_test"
+
+python ./test1.py ./kernel-0.files > cmpout
+if [[ $? != 0 ]]
+then
+	echo "test.py failed "
+	exit 1
+fi
+
+sort cmpout > cmpout.sort
+diff cmpout.sort output.sort > output_diff 2>&1
+if  [[ $? != 0 ]]
+then
+	echo "tree traverse output failed see output_diff"
+	exit 1
+fi
+
+echo "Correct output produced. Test pased". # still verify manually !!
+
+***** shell script end ***
+
+A correct implementation will have cmpout.sort and output.sort "as same
+contents".
+
+if you passed this congrats ! go to test case 2

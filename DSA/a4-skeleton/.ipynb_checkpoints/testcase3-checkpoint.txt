@@ -1,0 +1,30 @@
+Test case 3:
+
+Procedure is same as previous test case except that we test this only on
+directories :
+
+let us choose the same directory we choose for test case 2:
+
+ls -di kernel-0/arch
+
+2415723 kernel-0/arch
+
+use that file id :
+
+tree = convert_input_to_tree(filename): # already tested in test case 1
+d=mydir(2415723)
+print(f' total files in dir: {d.dir_total_files(tree)}')
+
+It should print:  5581.
+
+You can verify this by doing the following on linux terminal:
+
+cd kernel-0/arch
+
+find . -type f | wc -l
+
+this should print 5581. 
+
+Please do not modify anything in the kernel-0 folder after extraction.
+
+
