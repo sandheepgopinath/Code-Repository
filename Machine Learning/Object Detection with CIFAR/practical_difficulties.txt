@@ -1,0 +1,16 @@
+If it has to be implemented on a mobile phone, the model has to be running on a server. 
+Once the camera gets the image, it will have to send the data to the server, where the computation will happen and then send the result back to the mobile,
+which will then be converted into a voice signal.
+
+If the model is running on the mobile, it can be difficult to update the model and it will keep using the resources of the mobile phone
+due to continous detection.It will also have more power consumption due to conitnous usage of the phone camera which usually has very high 
+resolution.
+
+It will also require the camera to be placed in the right position, which can be tricky in real world use case. 
+
+Since it requires continous interaction with server to do the prediction, network issues can also affect its working. 
+
+Another option to implement can be to make a dedicated device or band, with camera pointing in multiple directions. A dedicated an optimised hardware can help to reduce the power consumption, as we do not need any display. We also need to do proper segmentation of images and prioritise the objects so that only the important detections are alerted to the user. 
+Otherwise in a crowded region it can give a lot of feedback to the user which can become confusing.
+
+

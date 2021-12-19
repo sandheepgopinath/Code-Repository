@@ -1,0 +1,58 @@
+,Borough,Neighbourhood,Cuisine
+0,The Bronx,Bedford Park,"Mexican,Puerto Rican,Dominican,Korean"
+1,The Bronx,Belmont,"Italian,Albanian"
+2,The Bronx,City Island,"Italian,Seafood"
+3,The Bronx,Morris Park,"Italian,Albanian"
+4,The Bronx,Norwood,Filipino
+5,The Bronx,Riverdale,Jewish
+6,The Bronx,South Broonx,"Puerto Rican, Dominican"
+7,The Bronx,Wakefield,"Jamaican, West Indian"
+8,The Bronx,Woodlawn,Irish
+9,Queens,Astoria,"Greek, Italian, Eastern European, Brazilian, E..."
+10,Queens,Bellerose,"Indian,Pakistani"
+11,Queens,Flushing,"Chinese, Korean"
+12,Queens,Forest Hills,"Jewish, Russian,Uzbek"
+13,Queens,Howard Beach,Italian
+14,Queens,Glendale,"German,Polish"
+15,Queens,Jackson heights,"Indian, Pakistani, Bangladeshi, Colombian, Ecu..."
+16,Queens,Jamaica,"Bangladeshi, Caribbean, African-American, Afri..."
+17,Queens,Little Neck,"Arab, Chinese,Italian"
+18,Queens,Richmond Hill,"Indian, Guyanese, West Indian, Pakistani, Bang..."
+19,Queens,The Rockaways,"Irish, Jewish"
+20,Queens,Woodhaven,"Irish, Dominican, Mexican, Guyanese"
+21,Queens,Woodside,"Filipino, Irish, Mexican, and Romanian"
+22,Brooklyn,Bay Ridge,"Irish, Italian, Greek, Turkish, Lebanese, Pale..."
+23,Brooklyn,Bedfors,"African-American, Jamaican, Trinidadian, Puert..."
+24,Brooklyn,Bensornhurst,"Italian, Chinese, Turkish, Russian, Mexican"
+25,Brooklyn,Borough Park,"Jewish, Italian, Mexican, Chinese"
+26,Brooklyn,Brighton Beach,"Russian, Georgian, Turkish, Pakistani, Ukrainian"
+27,Brooklyn,Bushwick,"Puerto Rican, Mexican, Dominican,Ecuadorian"
+28,Brooklyn,Canarsie,"Jamaican, West Indian, African-American"
+29,Brooklyn,Carrol Gardens,Italian
+30,Brooklyn,Crown heights,"Jamaican, West Indian, Jewish"
+31,Brooklyn,East New York,"African-American, Dominican,Puerto Rican"
+32,Brooklyn,Flatbush,"Jamaican, Haitian, Creole"
+33,Brooklyn,Greenpoint,"Polish,Ukrainian"
+34,Brooklyn,Kensington,"Bengali, Pakistani, Mexican, Uzbek,Polish"
+35,Brooklyn,Midwood,"Jewish, Italian, Russian,Pakistani"
+36,Brooklyn,Park Slope,"Italian, Irish, French,Puerto Rican"
+37,Brooklyn,Red Hook,"Puerto Rican, African-American,Italian"
+38,Brooklyn,Sheepshead Bay,"Seafood, Russian, Italian"
+39,Brooklyn,Sunset park,"Puerto Rican, Chinese, Arab, Mexican, Italian"
+40,Brooklyn,Williamsburg,"Italian, Jewish, Dominican,Puerto Rica"
+41,Staten Island,Port Richmond,"Mexican, Indian, Italian"
+42,Staten Island,Rossville,"Italian, Russian, Arab , Polish"
+43,Staten Island,Tompkinsville,"Italian, Sri Lankan, Pakistani, Indian"
+44,Manhattan,Chinatown,"Chinese,Vietnamese"
+45,Manhattan,East Harlem,"Puerto Rican, Mexican, Dominican,Italian"
+46,Manhattan,East Village,"Japanese, Korean, Indian , Ukrainian"
+47,Manhattan,Greenwich Village,Italian
+48,Manhattan,Harlem,"Italian, African-American, Latin American, Wes..."
+49,Manhattan,Koreatown,Korean
+50,Manhattan,Nolita,Australian
+51,Manhattan,Little Italy,Italian
+52,Manhattan,Lower East Side,"Puerto Rican, Jewish, Italian, Latin American"
+53,Manhattan,Murray Hill,"Indian, Pakistani , Bangladeshi"
+54,Manhattan,Upper West Side,"Jewish, Chinese"
+55,Manhattan,Washington Heights,"Dominican, Puerto Rican, Italian , Jewish"
+56,Manhattan,Upper East Side,"German, Czech, Hungarian"
