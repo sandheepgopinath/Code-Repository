@@ -19,3 +19,13 @@ Intention :
 - Compare the performance
 
 Findings:
+When the data is trained after applying the steps as mentioned in the question, it will create an
+unbalanced dataset. The dataset has 315 data points belong to Class 5 and 63687 data points belng
+to Class NOT 5. Even if all the predictions are 0, there will be 99.995 % accuracy.
+After the data is generated and balanced after using synthesised data from GAN, we can see that
+the model starts from a higher loss than in the earlier case and then it converges to better accuracy.
+In this case the baseline accuracy is 50%. Hence the second model is a better solution.
+The above approach can help in Synthetic data generation, which helps in balancing unbalanced
+dataset. It can help in cases where the data collection is tricky or expensive. It also helps to ensure
+that the models created are much more eﬀicient in production than a model which is trained using
+a unblanced dataset.
