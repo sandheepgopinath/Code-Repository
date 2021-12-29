@@ -5,18 +5,20 @@ import sqlite3 as sql
 # Creating a Flask Object
 
 app=Flask('__name__')
-
+global review
 @app.route('/',methods=['GET'])
 @app.route('/submit',methods=['GET','POST'])
 def home_page():
+    global reviews
     if request.method=='POST':
         og_review=request.form['review']
         predictor=analyse(str(og_review))
-        review=predictor.prediction
-        
+        review=predictor.prediction 
+        reviews=og_review
+
         with sql.connect('database.db') as connection:
             cursor=connection.cursor()
-            cursor.execute("INSERT INTO review (review,sentiment) VALUES (?,?)",(og_review,review))
+            cursor.execute("INSERT INTO reviews (review,sentiment) VALUES (?,?)",(og_review,review))
             connection.commit()
         return render_template('result.html',review=review)
     return render_template('hello.html')
@@ -27,11 +29,35 @@ def database():
     connection.row_factory=sql.Row
 
     cursor=connection.cursor()
-    cursor.execute('select * from review')
+    cursor.execute('select * from reviews')
 
     rows=cursor.fetchall()
     connection.close()
     return render_template('data.html',rows=rows)
 
+@app.route('/updatefalse',methods=['GET','POST'])
+def update_true():
+    global reviews
+    if request.method=='POST':
+        with sqlite3.connect('database.db') as connection:
+            cursor=connection.cursor()
+            cursor.execute('UPDATE review SET status="False" WHERE review="'+str(reviews)+'"')
+            connection.commit()
+
+    return render_template('hello.html')        
+
+
+@app.route('/updatetrue',methods=['GET','POST'])
+def update_false():
+    global reviews
+    if request.method=='POST':
+        with sqlite3.connect('database.db') as connection:
+            cursor=connection.cursor()
+            cursor.execute('UPDATE reviews SET status="False" WHERE review="'+str(reviews)+'"')
+            connection.commit()
+
+    return render_template('hello.html')
+
 if __name__=='__main__':
     app.run()
+
