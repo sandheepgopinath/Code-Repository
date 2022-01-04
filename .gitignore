@@ -3,3 +3,4 @@ Artificial Intelligence/molecule_generation_SMILES/datasets/*.smi.gz
 Artificial Intelligence/molecule_generation_SMILES/datasets/*.smi
 Artificial Intelligence/molecule_generation_SMILES/datasets/gdb11/*smi
 Artificial Intelligence/molecule_generation_SMILES/datasets/.files.save.swp
+Artificial Intelligence/molecule_generation_SMILES/scripts/*.smi
