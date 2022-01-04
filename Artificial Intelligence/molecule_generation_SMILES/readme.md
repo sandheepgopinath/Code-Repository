@@ -10,3 +10,7 @@
     <b>datasets/extract.sh </b>: To extract files from a tar file and to save it in a folder
 
 <br>
+
+
+Credits for data :https://gdb.unibe.ch/downloads/
+		 :https://zinc.docking.org/substances/
