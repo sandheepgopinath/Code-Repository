@@ -14,3 +14,5 @@
 
 Credits for data :https://gdb.unibe.ch/downloads/
 		 :https://zinc.docking.org/substances/
+		 : https://zinc.docking.org/substances/search/?q=ZINC15
+
