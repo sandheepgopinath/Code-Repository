@@ -1,2 +1,5 @@
- Credits for the data used in this folder belongs to 
-https://gdb.unibe.ch/downloads/
+Credits for data :https://gdb.unibe.ch/downloads/
+                 :https://zinc.docking.org/substances/
+                 :https://zinc.docking.org/substances/search/?q=ZINC15
+                 :https://zinc.docking.org/substances/subsets/for-sale.csv?count=all with 'for_sale' filter
+
