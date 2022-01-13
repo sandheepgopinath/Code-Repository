@@ -23,14 +23,3 @@
 <b>scripts/ZINC_DB_molecule_generation_using_LSTM_VAE.pdf </b> : PDF version of above notebook
 
 
-Credits for data :https://gdb.unibe.ch/downloads/
-		 :https://zinc.docking.org/substances/
-		 :https://zinc.docking.org/substances/search/?q=ZINC15
-		 :https://zinc.docking.org/substances/subsets/for-sale.csv?count=all with 'for_sale' filter
-		 
-		 
-		 
-Learnings : 
-The latent space can be changed to generate new molecules using LSTM AutoEncoder
-
-
