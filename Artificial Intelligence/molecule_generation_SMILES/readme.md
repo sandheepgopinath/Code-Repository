@@ -20,7 +20,7 @@
 <b>scripts/molecule_generation_using_VAE.ipynb</b> : Notebook with Molecule generation using VAE on gdb11 script. <br>
 <b>scripts/project.zip</b> : Compressed project folder with datasets, models and ipynb<br>
 <b>scripts/ZINC_DB_molecule_generation_using_LSTM_VAE.ipynb</b> : Notebook with molecule generation using LSTM Autoencoder on ZINC15 dataset<br>
-<b>scripts/ZINC_DB_molecule_generation_using_LSTM_VAE.pdf </b> : PDF version of above notebook
+<b>scripts/ZINC_DB_molecule_generation_using_LSTM_VAE.pdf </b> : PDF version of above notebook..
 
 
 Credits for data :https://gdb.unibe.ch/downloads/

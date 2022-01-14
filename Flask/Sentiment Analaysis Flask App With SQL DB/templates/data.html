@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<a href = "/">Home</a><body>_ _ _ _ _ _ </body><a href = "/data">Database</a><body>_ _ _ _ _ _ </body><a href = "/">Back</a> 
+<br><br>
+<body>
+   
+      <table border = 1>
+         <thead>
+            <td>Review</td>
+             <td>Sentiment</td>
+	     <td>Prediction Status</td>
+         </thead>
+         
+         {% for row in rows %}
+            <tr>
+               <td>{{row["review"]}}</td>
+               <td>{{row["sentiment"]}}</td>
+	       <td>{{row["status"]}}</td>
+            </tr>
+         {% endfor %}
+      </table>
+      <br>
+      <a href = "/">Back</a>
+      
+   </body>
+</html>
