@@ -11,7 +11,7 @@ img=cv2.filter2D(im,-1,sharpen_kernel)
 
 img1=cv2.Canny(img,100,200)
 
-cv2.imshow('Sharpened Edges',img1)
+cv2.imshow('Sharpened Edges',img)
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
