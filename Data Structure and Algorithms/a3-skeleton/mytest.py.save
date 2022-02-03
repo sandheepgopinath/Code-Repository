@@ -1,9 +1,0 @@
-from mycrm import *
-
-mycrm=mycrm()
-
-#Add a server
-mycrm.add('Server1',10,100)
-# Checking if the server has been created properly
-print(mycrm.server)
-print(
