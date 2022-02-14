@@ -1,4 +1,0 @@
-username: neo4j
-generated_password:
-feLLlKWZWk66s4SDOQr3DhEIqFq0Uuw4EAiSqWbg6ig
-
