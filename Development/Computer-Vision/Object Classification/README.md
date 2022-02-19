@@ -30,7 +30,7 @@
 ##### Folders : 
 - Data : Images used for training
 - Data Scraping : The code used for scraping images from Google Images and Bing
-- Models : The VGG and top_layer models in h5 format
+- <a href-'https://drive.google.com/drive/folders/1-4n9eS_qcISi1V-4fHM5ZjnhEAqAyngB?usp=sharing'>Models</a> : The VGG and top_layer models in h5 format
 - Notebooks : Notebooks used for model training and prediction
 - Weights : Model weights used for creating the model
 
