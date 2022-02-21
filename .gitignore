@@ -7,4 +7,6 @@ Artificial Intelligence/molecule_generation_SMILES/scripts/*.smi
 Artificial Intelligence/molecule_generation_SMILES/scripts/*.csv
 Deployment/Flask/Image_Classification/top_layer_final.h5
 Deployment/Flask/Image_Classification/vgg_layer_final.h5
-
+Deployment/Flask/Image_Classification/vgg_layer.h5
+Deployment/Flask/Image_Classification/top_layer_final.h5
+Deployment/Flask/Image_Classification/tf_classification/
