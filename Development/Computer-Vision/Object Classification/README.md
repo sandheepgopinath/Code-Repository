@@ -1,4 +1,21 @@
 ## Image Classification
+### Image Classification
+
+###### Requirement 
+- To scrap data of Pikachu, Kanye West and cats from internet
+- To train a CNN model
+- To get good confusion matrix
+- Bonus : To deploy the solution online
+
+###### Data Folder : Image Classification
+
+- Contents
+ 	- README.md : Details abour process and steps followed
+    - <a href='https://drive.google.com/drive/folders/1n2SdiXbp4_ZAnbFXlKC8E191340qdSyY?usp=sharing'>Data</a> : Images used for training
+    - Data Scraping : The code used for scraping images from Google Images and Bing
+    - <a href='https://drive.google.com/drive/folders/1-rpMfLOdLmHvzle5KuPzlQVySOJ4IcRg?usp=sharing'>Models</a> : The VGG and top_layer models in h5 format
+    - Notebooks : Notebooks used for model training and prediction
+    - Weights : Model weights used for creating the model
 
 ### Step 1 : Data Collection
 
