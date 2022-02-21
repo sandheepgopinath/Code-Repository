@@ -10,3 +10,6 @@ Deployment/Flask/Image_Classification/vgg_layer_final.h5
 Deployment/Flask/Image_Classification/vgg_layer.h5
 Deployment/Flask/Image_Classification/top_layer_final.h5
 Deployment/Flask/Image_Classification/tf_classification/
+Deployment/Heroku/eflask/.git/
+Deployment/Heroku/.git
+Deployment/Heroku/.git
