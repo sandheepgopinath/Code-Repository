@@ -2,9 +2,16 @@
 
 Summary : To analyse chest Xray's and understand if the person has consolidation in lungs or not
 <br>
-<h3>Files</h3>
-- consolidation_train_gt.csv : train dataset with details about filename and consolidation
-- Covid Xray_Data_Preperation.ipynb : Notebook for preprocessing and data preperation
-- vgg16_weights_tf_dim_order.h5 : Weights of VGG16 model on Imagenet used for Transfer Learning
-- X_Ray_Analysis_transfer_learning.ipynb : Model building using transfer learning and normal CNN
-                        # Covid Xray analyser
+#### Folders
+<a href='https://drive.google.com/drive/folders/1fjrxTfARR43m-Sx9Y0SKJkI5K3rKB9zC?usp=sharing'> Compressed data </a> : Data used for training the model
+
+<a href='https://drive.google.com/drive/folders/1Ts0Db6o-B8XdRIy98We5H4p0Jsf7HhZI?usp=sharing'> Model </a> : CNN model created in h5 format
+
+Notebooks : Contains
+- Covid_Xray_Data_Preperation.ipynb : Code used for data pre procesisng
+- Covid_X_Ray_Analysis_transfer__learning.ipynb : Model building notebook
+
+<a href='https://drive.google.com/drive/folders/1CfigFr5h_wMQCcQcRWDvVMYEtmoPACK-?usp=sharing'> Saved Weights </a> : Weights of the best model
+
+
+
