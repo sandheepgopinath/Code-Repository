@@ -1,0 +1,376 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "OpenGym Taxi.ipynb",
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "execution_count": 5,
+      "metadata": {
+        "id": "pS13eo1OugHG"
+      },
+      "outputs": [],
+      "source": [
+        "# Importing OpenAi Gym \n",
+        "import gym\n",
+        "import numpy as np\n",
+        "\n",
+        "env = gym.make(\"Taxi-v3\")"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Creating a state variable by generating a random state\n",
+        "state = env.reset()"
+      ],
+      "metadata": {
+        "id": "YftqR6CC31Vk"
+      },
+      "execution_count": 6,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Visualizing the current state\n",
+        "env.render()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "m8SXpxUF4E7_",
+        "outputId": "abcc344f-0c50-4d3f-8ec8-c1aa937f5733"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "+---------+\n",
+            "|\u001b[34;1mR\u001b[0m: | : :G|\n",
+            "| : |\u001b[43m \u001b[0m: : |\n",
+            "| : : : : |\n",
+            "| | : | : |\n",
+            "|Y| : |\u001b[35mB\u001b[0m: |\n",
+            "+---------+\n",
+            "\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Checking all possible actions\n"
+      ],
+      "metadata": {
+        "id": "aqBPlK_c4gNx"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "n_states = env.observation_space.n\n",
+        "n_actions = env.action_space.n"
+      ],
+      "metadata": {
+        "id": "o020Dumz4J1q"
+      },
+      "execution_count": 15,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Changing the state of the system and visualizaing it\n",
+        "env.env.s = 0\n",
+        "env.render()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "CW1aZil84SJF",
+        "outputId": "d04af831-3902-41bb-d539-9d3557df4e8d"
+      },
+      "execution_count": 18,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "+---------+\n",
+            "|\u001b[35m\u001b[34;1m\u001b[43mR\u001b[0m\u001b[0m\u001b[0m: | : :G|\n",
+            "| : | : : |\n",
+            "| : : : : |\n",
+            "| | : | : |\n",
+            "|Y| : |B: |\n",
+            "+---------+\n",
+            "\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Checking efficiency of a completely random process\n"
+      ],
+      "metadata": {
+        "id": "REniX8xl7YxO"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "state = env.reset()\n",
+        "counter = 0\n",
+        "g = 0\n",
+        "reward = 0\n",
+        "print('Starting ride')\n",
+        "env.render()\n",
+        "while reward != 20 : \n",
+        "  state, reward, done, info = env.step(env.action_space.sample())\n",
+        "  counter += 1\n",
+        "  g += reward\n",
+        "print('Ride dropped')\n",
+        "env.render()\n",
+        "print('The passenger was dropped off at the location in ',counter,' steps with ',g,'  reward')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "5MoDC0Jw4eCV",
+        "outputId": "fb1bfb7b-af6f-4f2e-f7e6-5f2a466890cb"
+      },
+      "execution_count": 53,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Starting ride\n",
+            "+---------+\n",
+            "|\u001b[34;1mR\u001b[0m: | : :G|\n",
+            "| : | : : |\n",
+            "| : : : : |\n",
+            "| |\u001b[43m \u001b[0m: | : |\n",
+            "|\u001b[35mY\u001b[0m| : |B: |\n",
+            "+---------+\n",
+            "\n",
+            "Ride dropped\n",
+            "+---------+\n",
+            "|R: | : :G|\n",
+            "| : | : : |\n",
+            "| : : : : |\n",
+            "| | : | : |\n",
+            "|\u001b[35m\u001b[34;1m\u001b[43mY\u001b[0m\u001b[0m\u001b[0m| : |B: |\n",
+            "+---------+\n",
+            "  (Dropoff)\n",
+            "The passenger was dropped off at the location in  2266  steps with  -8833   reward\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Using a Q Learning algorithm"
+      ],
+      "metadata": {
+        "id": "VkG0kFhm7cFb"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Define a Q Table\n",
+        "# The rows of the Q table would be the states and columns would be be actions\n",
+        "# The Q-table is initialized with 0's to start with\n",
+        "\n",
+        "Q = np.zeros ( ( env.observation_space.n, env.action_space.n))"
+      ],
+      "metadata": {
+        "id": "6VIWOkMK9vEB"
+      },
+      "execution_count": 77,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Define the number of episodes\n",
+        "episodes = 10000\n",
+        "# Define alpha and gamma\n",
+        "alpha = 0.81\n",
+        "gamma = 0.96\n",
+        "\n",
+        "# Define the maximum steps ( Optional )\n",
+        "max_steps = 100\n"
+      ],
+      "metadata": {
+        "id": "vM5Qhu1k8RBr"
+      },
+      "execution_count": 76,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "for episode in range(1,episodes+1):\n",
+        "  stop = False\n",
+        "  g,reward = 0,0\n",
+        "  state = env.reset()\n",
+        "  first_state = state\n",
+        "  steps = 0\n",
+        "\n",
+        "  while stop != True : \n",
+        "    action = np.argmax( Q[state])\n",
+        "    new_state, reward , done, info = env.step( action )\n",
+        "    Q[state,action] += alpha * ( reward + np.max( Q[new_state]) - Q[state,action])\n",
+        "    g += reward\n",
+        "    state = new_state\n",
+        "    steps += 1\n",
+        "    if steps > max_steps :\n",
+        "      stop = True"
+      ],
+      "metadata": {
+        "id": "d2eZzxtz8UBz"
+      },
+      "execution_count": 80,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Checking the efficiency of the process with a trained Q table\n"
+      ],
+      "metadata": {
+        "id": "DxlMy5gE8XTs"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "env.reset()\n",
+        "env.render()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "pHns0fSMBJTl",
+        "outputId": "402f6fb9-db75-4117-bdca-ae4495729d50"
+      },
+      "execution_count": 89,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "+---------+\n",
+            "|\u001b[34;1mR\u001b[0m: |\u001b[43m \u001b[0m: :G|\n",
+            "| : | : : |\n",
+            "| : : : : |\n",
+            "| | : | : |\n",
+            "|Y| : |\u001b[35mB\u001b[0m: |\n",
+            "+---------+\n",
+            "\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "start = env.reset()\n",
+        "steps = 0\n",
+        "rewards = 0\n",
+        "print('Ride started')\n",
+        "env.render()\n",
+        "done = False\n",
+        "while done != True : \n",
+        "  action = np.argmax(Q[start])\n",
+        "  start , reward , done, info = env.step( action )\n",
+        "  steps += 1\n",
+        "  rewards += reward\n",
+        "\n",
+        "print('Ride dropped')\n",
+        "env.render()\n",
+        "print('The passenger was dropped off at the location in ',steps,' steps with ',rewards,'  reward')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "rGUSuW7n8aE4",
+        "outputId": "f1eb191d-06f9-483f-f4f6-0daed77e13ed"
+      },
+      "execution_count": 93,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Ride started\n",
+            "+---------+\n",
+            "|\u001b[35mR\u001b[0m: | : :G|\n",
+            "| : | : : |\n",
+            "| : : : : |\n",
+            "| | : | : |\n",
+            "|Y| : |\u001b[34;1mB\u001b[0m:\u001b[43m \u001b[0m|\n",
+            "+---------+\n",
+            "\n",
+            "Ride dropped\n",
+            "+---------+\n",
+            "|\u001b[35m\u001b[34;1m\u001b[43mR\u001b[0m\u001b[0m\u001b[0m: | : :G|\n",
+            "| : | : : |\n",
+            "| : : : : |\n",
+            "| | : | : |\n",
+            "|Y| : |B: |\n",
+            "+---------+\n",
+            "  (Dropoff)\n",
+            "The passenger was dropped off at the location in  10  steps with  11   reward\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## The process has now become optimized"
+      ],
+      "metadata": {
+        "id": "5AIFdNHeBgY9"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        ""
+      ],
+      "metadata": {
+        "id": "hqo_dIyyBlMf"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
